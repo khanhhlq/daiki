@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+#main {
+  background-image: url("../media/background/Chill-01.gif");
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.controller {
+  background-image: #fff;
+  height: 90px;
+  width: 130px;
+}
