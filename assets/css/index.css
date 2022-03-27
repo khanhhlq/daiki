@@ -44,3 +44,37 @@
   -webkit-border-radius: 50%;
   width: 11em;
 }
+
+.panel .info img {
+  animation: circular 30s linear 0s infinite;
+  -webkit-animation: circular 30s linear 0s infinite;
+  -moz-animation: circular 30s linear 0s infinite;
+  -o-animation: circular 30s linear 0s infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes circular {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
+/* Standard syntax */
+@keyframes circular {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
