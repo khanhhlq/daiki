@@ -89,18 +89,18 @@
   padding: 0px 0px 8px 0px;
 }
 
-.panel .info .player {
+.panel .info .control {
   display: flex;
 }
 
-.panel .info .player button {
+.panel .info .control button {
   outline: none;
   border: none;
   background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
 }
 
-.panel .info .player img {
+.panel .info .control img {
   width: 20px;
 }
 
