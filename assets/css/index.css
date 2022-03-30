@@ -76,20 +76,20 @@
 .panel .info .banner {
   border: 1px #d4d4d4 solid;
   padding: 7px;
+
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   width: 11em;
   box-shadow: var(--dim-green-glow);
-}
-
-.panel .info .banner {
   animation: circular 30s linear 0s infinite;
   -webkit-animation: circular 30s linear 0s infinite;
   -moz-animation: circular 30s linear 0s infinite;
   -o-animation: circular 30s linear 0s infinite;
 }
 
+.panel .info .des {
+}
 .panel .info .des .play {
   outline: none;
   width: 26px;

@@ -1,12 +1,15 @@
 
-// 2. This code loads the IFrame Player API code asynchronously.
-var tag = document.createElement('script');
-
+// 🌱 Code này tải IFrame Player API.
+let tag = document.createElement('script');
 tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName('script')[0];
+
+// 🌵 Khởi ạo biến để tương tác với video
+let player;
+
+let firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-var player;
+// 💡 Hàm lấy dữ liệu video trên youtube về bằng id
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
         height: '390',
@@ -20,22 +23,23 @@ function onYouTubeIframeAPIReady() {
         events: {
             'onReady': onPlayerReady,
         }
-    });
+    })
 }
 
+// 🔊 Bắt đầu phát
 const playVideo = () => {
     player.playVideo()
 }
 
-const onPlayerReady = (event) => {
-    event.target.playVideo()
-}
-
+// 🔈 Tạm dừng 
 const pauseVideo = () => {
     player.pauseVideo()
 }
 
-// 
 const setVolume = () => {
 
+}
+
+const onPlayerReady = (event) => {
+    event.target.playVideo()
 }
