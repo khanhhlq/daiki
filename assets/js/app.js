@@ -23,13 +23,19 @@ function onYouTubeIframeAPIReady() {
     });
 }
 
-function playVideo() {
-    player.playVideo();
-}
-function onPlayerReady(event) {
-    event.target.playVideo();
+const playVideo = () => {
+    player.playVideo()
 }
 
-function stopVideo() {
-    player.stopVideo();
+const onPlayerReady = (event) => {
+    event.target.playVideo()
+}
+
+const pauseVideo = () => {
+    player.pauseVideo()
+}
+
+// 
+const setVolume = () => {
+
 }
