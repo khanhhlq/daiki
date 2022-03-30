@@ -9,7 +9,7 @@ let player;
 let firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-// 💡 Hàm lấy dữ liệu video trên youtube về bằng id
+// 💡 Hàm lấy dữ liệu video trên youtube về bằng id video
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
         height: '390',
@@ -36,9 +36,6 @@ const pauseVideo = () => {
     player.pauseVideo()
 }
 
-const setVolume = () => {
-
-}
 
 const onPlayerReady = (event) => {
     event.target.playVideo()

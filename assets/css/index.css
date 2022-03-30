@@ -45,8 +45,7 @@
 
 #main {
   display: flex;
-  /* background-image: url("../media/background/Chill-01.gif"); */
-  background-color: rgb(97, 93, 93);
+  background-image: url("https://i.pinimg.com/originals/b7/a1/d3/b7a1d3841ac99cc7ca57d9e414ad7b9c.png");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -54,33 +53,26 @@
 }
 
 .panel {
+  display: flex;
   align-self: flex-end;
-  margin: 0px 0px 3em 3em;
+  margin: 0px 0px 2em 3em;
   border-radius: 24px;
 }
 
 .panel .info {
   display: flex;
-  padding: 16px 16px 16px 16px;
+  flex-direction: column;
   text-align: center;
-}
-
-.panel .info h1 {
-  font-weight: 300;
-  font-size: 24px;
-  color: white !important;
-  text-shadow: var(--dim-green-glow);
-  border: none;
 }
 
 .panel .info .banner {
   border: 1px #d4d4d4 solid;
   padding: 7px;
-
+  margin-bottom: 16px;
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
-  width: 11em;
+  width: 9em;
   box-shadow: var(--dim-green-glow);
   animation: circular 30s linear 0s infinite;
   -webkit-animation: circular 30s linear 0s infinite;
@@ -88,16 +80,28 @@
   -o-animation: circular 30s linear 0s infinite;
 }
 
-.panel .info .des {
+.panel .info h1 {
+  font-weight: 300;
+  font-size: 22px;
+  color: white !important;
+  text-shadow: var(--dim-green-glow);
+  border: none;
+  padding: 0px 0px 8px 0px;
 }
-.panel .info .des .play {
+
+.panel .info .player {
+  display: flex;
+}
+
+.panel .info .player button {
   outline: none;
-  width: 26px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
 }
 
-#player {
-  display: none;
+.panel .info .player img {
+  width: 20px;
 }
 
 @-webkit-keyframes circular {
