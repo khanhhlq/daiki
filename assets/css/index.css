@@ -65,21 +65,6 @@
   text-align: center;
 }
 
-.panel .info .banner {
-  border: 1px #d4d4d4 solid;
-  padding: 7px;
-  margin-bottom: 16px;
-  border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  width: 9em;
-  box-shadow: var(--dim-green-glow);
-  animation: circular 30s linear 0s infinite;
-  -webkit-animation: circular 30s linear 0s infinite;
-  -moz-animation: circular 30s linear 0s infinite;
-  -o-animation: circular 30s linear 0s infinite;
-}
-
 .panel .info h1 {
   font-weight: 300;
   font-size: 22px;
@@ -102,30 +87,4 @@
 
 .panel .info .control img {
   width: 20px;
-}
-
-@-webkit-keyframes circular {
-  from {
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-  }
-}
-
-@keyframes circular {
-  from {
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-  }
 }
