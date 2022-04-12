@@ -14,20 +14,36 @@
 </head>
 
 <body>
-    <div id="main">
-        <div class="panel">
-            <div class="info">
-                <h1>🔴 lofi hip hop radio - beats to relax/study to 📻</h1>
-                <div class="control">
-                    <button onclick="playVideo()"><img src="assets/media/icon/play.1055bee6.svg"
-                            alt="Error Icon" /></button>
-                    <button onclick="stopVideo()"><img src="assets/media/icon/pause.69ddfc29.svg"
-                            alt="Error Icon" /></button>
-                </div>
-            </div>
-        </div>
+
+
+    <div id="YouTube-player"></div>
+
+    <div>
+        <span class="nowrap margin-left-m margin-right-m">
+            <label for="YouTube-video-id">videoId</label>:
+            <input id="YouTube-video-id" type="text" value="DWcJFNfaw9c" size="12" pattern="[_\-0-9A-Za-z]{11}"
+                onchange="youTubePlayerChangeVideoId();">
+        </span>
+
+        <span class="nowrap">
+            <button onclick="youTubePlayerPlay();">Play</button>
+            <button onclick="youTubePlayerPause();">Pause</button>
+            <button onclick="youTubePlayerStop();">Stop</button>
+        </span>
     </div>
-    <div id="player"></div>
+
+    <div>
+        <input id="YouTube-player-progress" type="range" value="0" min="0" max="100"
+            onchange="youTubePlayerCurrentTimeChange(this.value);" oninput="youTubePlayerCurrentTimeSlide();">
+        <label for="YouTube-player-progress">duration</label>
+    </div>
+
+    <div>
+        <input id="YouTube-player-volume" type="range" value="50" min="0" max="100"
+            onchange="youTubePlayerVolumeChange(this.value);">
+        <label for="YouTube-player-volume">volume</label>
+    </div>
+    </div>
     <script src="assets/js/app.js"></script>
 </body>
 
