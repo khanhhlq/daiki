@@ -213,6 +213,8 @@ function youTubePlayerPause() {
 
     if (youTubePlayerActive()) {
         youTubePlayer.pauseVideo();
+        document.getElementById("pause").classList.add("displayNone")
+        document.getElementById("play").classList.remove("displayNone")
     }
 }
 
@@ -225,6 +227,8 @@ function youTubePlayerPlay() {
 
     if (youTubePlayerActive()) {
         youTubePlayer.playVideo();
+        document.getElementById("pause").classList.remove("displayNone")
+        document.getElementById("play").classList.add("displayNone")
     }
 }
 

@@ -14,35 +14,117 @@
 </head>
 
 <body>
-
-
-    <div id="YouTube-player"></div>
-
-    <div>
-        <span class="nowrap margin-left-m margin-right-m">
-            <label for="YouTube-video-id">videoId</label>:
-            <input id="YouTube-video-id" type="text" value="DWcJFNfaw9c" size="12" pattern="[_\-0-9A-Za-z]{11}"
-                onchange="youTubePlayerChangeVideoId();">
-        </span>
-
-        <span class="nowrap">
-            <button onclick="youTubePlayerPlay();">Play</button>
-            <button onclick="youTubePlayerPause();">Pause</button>
-            <button onclick="youTubePlayerStop();">Stop</button>
-        </span>
+    <div id="YouTube-player" style="display: none;"></div>
+    <div class="control">
+        <div>
+            <span>
+                <input id="YouTube-video-id" type="text" value="l7TxwBhtTUY" size="12" pattern="[_\-0-9A-Za-z]{11}"
+                    onchange="youTubePlayerChangeVideoId();" style="display: none;">
+            </span>
+            <span class="nowrap">
+                <button id="play" onclick="youTubePlayerPlay();"><img
+                        src="assets/media/icon/play.1055bee6.svg" /></button>
+                <button id="pause" class="displayNone" onclick="youTubePlayerPause();"><img
+                        src="assets/media/icon/pause.69ddfc29.svg" /></button>
+            </span>
+        </div>
+        <div>
+            <input id="YouTube-player-progress" type="range" value="0" min="0" max="100"
+                onchange="youTubePlayerCurrentTimeChange(this.value);" oninput="youTubePlayerCurrentTimeSlide();">
+            <label for="YouTube-player-progress"></label>
+        </div>
+        <div>
+            <input id="YouTube-player-volume" type="range" value="50" min="0" max="100"
+                onchange="youTubePlayerVolumeChange(this.value);">
+            <label for="YouTube-player-volume"></label>
+        </div>
     </div>
-
-    <div>
-        <input id="YouTube-player-progress" type="range" value="0" min="0" max="100"
-            onchange="youTubePlayerCurrentTimeChange(this.value);" oninput="youTubePlayerCurrentTimeSlide();">
-        <label for="YouTube-player-progress">duration</label>
-    </div>
-
-    <div>
-        <input id="YouTube-player-volume" type="range" value="50" min="0" max="100"
-            onchange="youTubePlayerVolumeChange(this.value);">
-        <label for="YouTube-player-volume">volume</label>
-    </div>
+    <div id="root">
+        <div class="fullscreen">
+            <div id="container" class="">
+                <div
+                    style="position: absolute; inset: 25%; cursor: pointer; z-index: 99; display: flex; align-items: center; justify-content: center;">
+                    <img class="shadow" src="/static/media/play.1055bee6.svg" alt=""
+                        style="width: 20px; height: 20px; flex: 0 0 20px; transform: scale(0.3); opacity: 0; transition: all 0.1s ease 0s;">
+                </div><img src="https://dc85enhu9zukf.cloudfront.net/gifs/lkceXNDw4Agryfrwz8.gif" alt=""
+                    style="position: absolute; width: 100vw; height: 100vh; top: 0px; left: 0px; object-fit: cover; z-index: 0;"><img
+                    src="https://dc85enhu9zukf.cloudfront.net/gifs/static3.gif" alt="preload"
+                    style="position: absolute; top: 100%; left: 100%;"><img
+                    src="https://dc85enhu9zukf.cloudfront.net/gifs/p71BYIPogqBPy.gif" alt="preload"
+                    style="position: absolute; top: 100%; left: 100%;">
+                <div id="crt-lines"></div>
+                <div id="darken"></div>
+                <div id="vignette"></div>
+                <div id="top-ui">
+                    <div><span class="red" id="visitors-counter"><span class="red">listening now 16</span><span
+                                class="red" style="display: inline-block; width: 10px; margin-left: 4px;">
+                            </span></span>
+                    </div>
+                    <div class="vertical">
+                        <div id="horizontal">
+                            <button type="button" class="hide-small-screen" title="Fullscreen"
+                                style="display: flex; align-items: center; margin-right: 14px; line-height: 0;">
+                                <img class="shadow" src="/static/media/fullscreen-enter.47fab6db.svg" alt=""
+                                    style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 0px;">
+                            </button>
+                            <button type="button" title="Pomodoro Timer"
+                                style="display: flex; align-items: center; margin-right: 14px; line-height: 0;">
+                                <img class="shadow" src="/static/media/timer.1427f4b2.svg" alt=""
+                                    style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 0px;">
+                            </button>
+                            <button type="button" title="About"
+                                style="display: flex; align-items: center; line-height: 0;">
+                                <img class="shadow" src="/static/media/heart.0513072e.svg" alt=""
+                                    style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 0px;">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 100%; z-index: 6; display: block;">
+                    <div style="width: 14px; height: 14px;"></div>
+                    <div id="buttons-ui">
+                        <div style="display: flex; justify-content: flex-start; align-items: center;"><button
+                                type="button" style="display: flex; align-items: center; line-height: 0;"><img
+                                    class="shadow" src="/static/media/play.1055bee6.svg" alt=""
+                                    style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 0px;"></button><button
+                                type="button" style="display: flex; align-items: center; line-height: 0;"><img
+                                    class="shadow" src="/static/media/shuffle.53b14e6b.svg" alt=""
+                                    style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 0px;"></button><button
+                                type="button" style="display: flex; align-items: center; line-height: 0;"><img
+                                    class="shadow" src="/static/media/previous.17bb0c57.svg" alt=""
+                                    style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 0px;"></button><button
+                                type="button" style="display: flex; align-items: center; line-height: 0;"><img
+                                    class="shadow" src="/static/media/forward.64c7a860.svg" alt=""
+                                    style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 0px;"></button>
+                        </div>
+                    </div>
+                    <div style="width: 12px; height: 12px;"></div>
+                    <div value="Qt0-9mO-ZXY" name="stations" id="stations-selector">
+                        <div id="stations-button" class="pointer"
+                            style="display: flex; align-items: center; flex-wrap: nowrap;"><img class="shadow"
+                                src="/static/media/beatsMute.70cdfd3c.svg" alt=""
+                                style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 8px;"> <span>Space Lofi
+                                Hip Hop Radio 24/7 🚀 Chill Lofi Beats To Study, Lofi Sleep Music 🚀 No Copyright
+                                Lofi</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="yt-wrapper"
+                    style="pointer-events: none; user-select: none; position: fixed; top: 100%; left: 100%;">
+                    <div
+                        style="width: 100%; height: 100%; overflow: hidden; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
+                        <div
+                            style="pointer-events: none; user-select: none; z-index: -1; border-radius: 8px; width: 100vw; height: 200vw;">
+                            <div style="width: 100%; height: 100%;"><iframe frameborder="0" allowfullscreen="1"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    title="YouTube video player" width="100%" height="100%"
+                                    src="https://www.youtube.com/embed/Qt0-9mO-ZXY?autoplay=0&amp;mute=0&amp;controls=0&amp;origin=https%3A%2F%2Fwww.lofi.cafe&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=true&amp;color=black&amp;enablejsapi=1&amp;widgetid=1"
+                                    id="widget2"></iframe></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="assets/js/app.js"></script>
 </body>
