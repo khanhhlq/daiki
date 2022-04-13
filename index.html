@@ -16,34 +16,6 @@
 </head>
 
 <body>
-
-    <div class="control">
-        <div>
-            <span>
-                <input id="YouTube-video-id" type="text" value="l7TxwBhtTUY" size="12" pattern="[_\-0-9A-Za-z]{11}"
-                    onchange="youTubePlayerChangeVideoId();" style="display: none;">
-            </span>
-            <span class="nowrap">
-                <button id="play" onclick="youTubePlayerPlay();"><img
-                        src="assets/media/icon/play.1055bee6.svg" /></button>
-                <button id="pause" class="displayNone" onclick="youTubePlayerPause();"><img
-                        src="assets/media/icon/pause.69ddfc29.svg" /></button>
-            </span>
-        </div>
-        <div>
-            <input id="YouTube-player-progress" type="range" value="0" min="0" max="100"
-                onchange="youTubePlayerCurrentTimeChange(this.value);" oninput="youTubePlayerCurrentTimeSlide();">
-            <label for="YouTube-player-progress"></label>
-        </div>
-        <div>
-            <input id="YouTube-player-volume" type="range" value="50" min="0" max="100"
-                onchange="youTubePlayerVolumeChange(this.value);">
-            <label for="YouTube-player-volume"></label>
-        </div>
-    </div>
-
-
-
     <div id="root">
         <div class="fullscreen">
             <div id="container" class="">
@@ -92,19 +64,29 @@
                     <div style="width: 14px; height: 14px;"></div>
                     <div id="buttons-ui">
                         <div style="display: flex; justify-content: flex-start; align-items: center;">
-                            <button type="button" style="display: flex; align-items: center; line-height: 0;">
-                                <img class="shadow" src="assets/media/svg/play.1055bee6.svg" alt=""
+                            <button id="play" type="button" style="display: flex; align-items: center; line-height: 0;">
+                                <img onclick="youTubePlayerPlay();" class="shadow"
+                                    src="assets/media/svg/play.1055bee6.svg" alt=""
+                                    style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 0px;">
+                            </button>
+                            <button id="pause" class="displayNone" type="button"
+                                style="display: flex; align-items: center; line-height: 0;">
+                                <img class="shadow" onclick="youTubePlayerPause();"
+                                    src="assets/media/svg/pause.69ddfc29.svg" alt=""
                                     style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 0px;">
                             </button>
                             <button type="button" style="display: flex; align-items: center; line-height: 0;">
                                 <img class="shadow" src="assets/media/svg/shuffle.53b14e6b.svg" alt=""
-                                    style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 0px;"></button><button
-                                type="button" style="display: flex; align-items: center; line-height: 0;"><img
-                                    class="shadow" src="assets/media/svg/previous.17bb0c57.svg" alt=""
-                                    style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 0px;"></button><button
-                                type="button" style="display: flex; align-items: center; line-height: 0;"><img
-                                    class="shadow" src="assets/media/svg/forward.64c7a860.svg" alt=""
-                                    style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 0px;"></button>
+                                    style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 0px;">
+                            </button>
+                            <button type="button" style="display: flex; align-items: center; line-height: 0;">
+                                <img class="shadow" src="assets/media/svg/previous.17bb0c57.svg" alt=""
+                                    style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 0px;">
+                            </button>
+                            <button type="button" style="display: flex; align-items: center; line-height: 0;">
+                                <img class="shadow" src="assets/media/svg/forward.64c7a860.svg" alt=""
+                                    style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 0px;">
+                            </button>
                         </div>
                     </div>
                     <div style="width: 12px; height: 12px;"></div>
@@ -119,10 +101,25 @@
                             </span>
                         </div>
                     </div>
+
+                    <div>
+                        <input id="YouTube-player-progress" type="range" value="0" min="0" max="100"
+                            onchange="youTubePlayerCurrentTimeChange(this.value);"
+                            oninput="youTubePlayerCurrentTimeSlide();">
+                        <label for="YouTube-player-progress"></label>
+                    </div>
+                    <div>
+                        <input id="YouTube-player-volume" type="range" value="50" min="0" max="100"
+                            onchange="youTubePlayerVolumeChange(this.value);">
+                        <label for="YouTube-player-volume"></label>
+                    </div>
+
+
                 </div>
             </div>
         </div>
     </div>
+
     <script src="assets/js/app.js"></script>
 </body>
 
