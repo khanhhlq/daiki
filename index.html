@@ -68,8 +68,6 @@
                                 <img onclick="youTubePlayerPlay();" id="play" class="shadow"
                                     src="assets/media/svg/play.1055bee6.svg" alt=""
                                     style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 0px;">
-                            </button>
-                            <button type="button" style="display: flex; align-items: center; line-height: 0;">
                                 <img onclick="youTubePlayerPause();" id="pause" class="shadow displayNone"
                                     src="assets/media/svg/pause.69ddfc29.svg" alt=""
                                     style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 0px;">
@@ -103,15 +101,15 @@
                             </span>
                         </div>
                     </div>
-                    <div>
+                    <!-- <div>
                         <input id="YouTube-player-progress" type="range" value="0" min="0" max="100"
                             onchange="youTubePlayerCurrentTimeChange(this.value);"
                             oninput="youTubePlayerCurrentTimeSlide();">
                         <label for="YouTube-player-progress"></label>
-                    </div>
+                    </div> -->
                     <div>
                         <input id="YouTube-player-volume" type="range" value="50" min="0" max="100"
-                            onchange="youTubePlayerVolumeChange(this.value);">
+                            style="margin: 15px 0px 0px 0px;" onchange="youTubePlayerVolumeChange(this.value);">
                         <label for="YouTube-player-volume"></label>
                     </div>
                 </div>
