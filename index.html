@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lofi music streams for studying, working, and relaxing.">
+    <meta property="og:title" content="i love my cafe - lofi music 🎧">
     <title>Daiki - Lofi Music 🎧</title>
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="shortcut icon" href="assets/media/icon/favicon.png" type="image/x-icon">
@@ -14,7 +16,7 @@
 </head>
 
 <body>
-    <div id="YouTube-player" style="display: none;"></div>
+
     <div class="control">
         <div>
             <span>
@@ -42,9 +44,10 @@
     <div id="root">
         <div class="fullscreen">
             <div id="container" class="">
+                <div id="YouTube-player" style="display: none;"></div>
                 <div
                     style="position: absolute; inset: 25%; cursor: pointer; z-index: 99; display: flex; align-items: center; justify-content: center;">
-                    <img class="shadow" src="/static/media/play.1055bee6.svg" alt=""
+                    <img class="shadow" src="assets/media/svg/play.1055bee6.svg" alt=""
                         style="width: 20px; height: 20px; flex: 0 0 20px; transform: scale(0.3); opacity: 0; transition: all 0.1s ease 0s;">
                 </div><img src="https://dc85enhu9zukf.cloudfront.net/gifs/lkceXNDw4Agryfrwz8.gif" alt=""
                     style="position: absolute; width: 100vw; height: 100vh; top: 0px; left: 0px; object-fit: cover; z-index: 0;"><img
@@ -56,25 +59,27 @@
                 <div id="darken"></div>
                 <div id="vignette"></div>
                 <div id="top-ui">
-                    <div><span class="red" id="visitors-counter"><span class="red">listening now 16</span><span
-                                class="red" style="display: inline-block; width: 10px; margin-left: 4px;">
-                            </span></span>
+                    <div>
+                        <span class="red" id="visitors-counter">
+                            <span class="red">🔴 Đài phát thanh</span>
+                            <span class="red" style="display: inline-block; width: 10px; margin-left: 4px;"></span>
+                        </span>
                     </div>
                     <div class="vertical">
                         <div id="horizontal">
                             <button type="button" class="hide-small-screen" title="Fullscreen"
                                 style="display: flex; align-items: center; margin-right: 14px; line-height: 0;">
-                                <img class="shadow" src="/static/media/fullscreen-enter.47fab6db.svg" alt=""
+                                <img class="shadow" src="assets/media/svg/fullscreen-enter.47fab6db.svg" alt=""
                                     style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 0px;">
                             </button>
                             <button type="button" title="Pomodoro Timer"
                                 style="display: flex; align-items: center; margin-right: 14px; line-height: 0;">
-                                <img class="shadow" src="/static/media/timer.1427f4b2.svg" alt=""
+                                <img class="shadow" src="assets/media/svg/timer.1427f4b2.svg" alt=""
                                     style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 0px;">
                             </button>
                             <button type="button" title="About"
                                 style="display: flex; align-items: center; line-height: 0;">
-                                <img class="shadow" src="/static/media/heart.0513072e.svg" alt=""
+                                <img class="shadow" src="assets/media/svg/heart.0513072e.svg" alt=""
                                     style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 0px;">
                             </button>
                         </div>
@@ -85,16 +90,16 @@
                     <div id="buttons-ui">
                         <div style="display: flex; justify-content: flex-start; align-items: center;"><button
                                 type="button" style="display: flex; align-items: center; line-height: 0;"><img
-                                    class="shadow" src="/static/media/play.1055bee6.svg" alt=""
+                                    class="shadow" src="assets/media/svg/play.1055bee6.svg" alt=""
                                     style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 0px;"></button><button
                                 type="button" style="display: flex; align-items: center; line-height: 0;"><img
-                                    class="shadow" src="/static/media/shuffle.53b14e6b.svg" alt=""
+                                    class="shadow" src="assets/media/svg/shuffle.53b14e6b.svg" alt=""
                                     style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 0px;"></button><button
                                 type="button" style="display: flex; align-items: center; line-height: 0;"><img
-                                    class="shadow" src="/static/media/previous.17bb0c57.svg" alt=""
+                                    class="shadow" src="assets/media/svg/previous.17bb0c57.svg" alt=""
                                     style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 0px;"></button><button
                                 type="button" style="display: flex; align-items: center; line-height: 0;"><img
-                                    class="shadow" src="/static/media/forward.64c7a860.svg" alt=""
+                                    class="shadow" src="assets/media/svg/forward.64c7a860.svg" alt=""
                                     style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 0px;"></button>
                         </div>
                     </div>
@@ -102,7 +107,7 @@
                     <div value="Qt0-9mO-ZXY" name="stations" id="stations-selector">
                         <div id="stations-button" class="pointer"
                             style="display: flex; align-items: center; flex-wrap: nowrap;"><img class="shadow"
-                                src="/static/media/beatsMute.70cdfd3c.svg" alt=""
+                                src="assets/media/svg/beatsMute.70cdfd3c.svg" alt=""
                                 style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 8px;"> <span>Space Lofi
                                 Hip Hop Radio 24/7 🚀 Chill Lofi Beats To Study, Lofi Sleep Music 🚀 No Copyright
                                 Lofi</span>
