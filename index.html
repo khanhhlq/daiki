@@ -64,14 +64,13 @@
                     <div style="width: 14px; height: 14px;"></div>
                     <div id="buttons-ui">
                         <div style="display: flex; justify-content: flex-start; align-items: center;">
-                            <button id="play" type="button" style="display: flex; align-items: center; line-height: 0;">
-                                <img onclick="youTubePlayerPlay();" class="shadow"
+                            <button type="button" style="display: flex; align-items: center; line-height: 0;">
+                                <img onclick="youTubePlayerPlay();" id="play" class="shadow"
                                     src="assets/media/svg/play.1055bee6.svg" alt=""
                                     style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 0px;">
                             </button>
-                            <button id="pause" class="displayNone" type="button"
-                                style="display: flex; align-items: center; line-height: 0;">
-                                <img class="shadow" onclick="youTubePlayerPause();"
+                            <button type="button" style="display: flex; align-items: center; line-height: 0;">
+                                <img onclick="youTubePlayerPause();" id="pause" class="shadow displayNone"
                                     src="assets/media/svg/pause.69ddfc29.svg" alt=""
                                     style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 0px;">
                             </button>
@@ -89,19 +88,21 @@
                             </button>
                         </div>
                     </div>
+                    <span>
+                        <input id="YouTube-video-id" type="text" value="Qt0-9mO-ZXY" size="12"
+                            pattern="[_\-0-9A-Za-z]{11}" onchange="youTubePlayerChangeVideoId();"
+                            style="display: none;">
+                    </span>
                     <div style="width: 12px; height: 12px;"></div>
-                    <div value="Qt0-9mO-ZXY" name="stations" id="stations-selector">
+                    <div id="stations-selector">
                         <div id="stations-button" class="pointer"
                             style="display: flex; align-items: center; flex-wrap: nowrap;">
-                            <img class="shadow" src="assets/media/svg/beatsMute.70cdfd3c.svg" alt=""
-                                style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 8px;" />
                             <span>
                                 Space Lofi Hip Hop Radio 24/7 🚀 Chill Lofi Beats To Study, Lofi Sleep Music 🚀 No
                                 Copyright Lofi
                             </span>
                         </div>
                     </div>
-
                     <div>
                         <input id="YouTube-player-progress" type="range" value="0" min="0" max="100"
                             onchange="youTubePlayerCurrentTimeChange(this.value);"
@@ -113,8 +114,6 @@
                             onchange="youTubePlayerVolumeChange(this.value);">
                         <label for="YouTube-player-volume"></label>
                     </div>
-
-
                 </div>
             </div>
         </div>
