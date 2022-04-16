@@ -10,14 +10,14 @@ btn1.addEventListener("click", () => {
 })
 
 btn2.addEventListener("click", () => {
-    nameSong.innerHTML = "hello"
+    nameSong.innerHTML = "coffee shop radio // 24/7 lofi hip-hop beats"
 })
 
 btn3.addEventListener("click", () => {
-    nameSong.innerHTML = "hello"
+    nameSong.innerHTML = "Jazz Piano Music - Relaxing Slow Jazz 24/7 for Work, Sleep, Study and Relax"
 })
 
 btn4.addEventListener("click", () => {
-    nameSong.innerHTML = "hello"
+    nameSong.innerHTML = "jazz/lofi hip hop radio🌱chill beats to relax/study to [LIVE 24/7]"
 })
 
