@@ -52,6 +52,7 @@
 }
 
 .nowrap button{
+  margin-top: 10px;
   border: solid 1px #fff;
   height: 30px;
   width: 30px;
@@ -59,6 +60,7 @@
   background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
   transition: .5s transform;
+  text-align: center;
 }
 
 .nowrap button img{

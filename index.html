@@ -19,7 +19,7 @@
     <div id="root">
         <div class="fullscreen">
             <div id="container" class="">
-                <div id="YouTube-player" style="display: none;" class="pointer"></div>
+                <div id="YouTube-player" class="pointer" style="z-index: 999;"></div>
                 <img id="background" src="https://dc85enhu9zukf.cloudfront.net/gifs/lkceXNDw4Agryfrwz8.gif" alt=""
                     style="position: absolute; width: 100vw; height: 100vh; top: 0px; left: 0px; object-fit: cover; z-index: 0;">
                 <img src="https://dc85enhu9zukf.cloudfront.net/gifs/static3.gif" alt="preload"
@@ -68,10 +68,10 @@
                                     src="assets/media/svg/pause.69ddfc29.svg" alt=""
                                     style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 0px;">
                             </button>
-                            <button type="button" style="display: flex; align-items: center; line-height: 0;">
+                            <!-- <button type="button" style="display: flex; align-items: center; line-height: 0;">
                                 <img class="shadow" src="assets/media/svg/shuffle.53b14e6b.svg" alt=""
                                     style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 0px;">
-                            </button>
+                            </button> -->
                             <button type="button" style="display: flex; align-items: center; line-height: 0;">
                                 <img class="shadow" src="assets/media/svg/previous.17bb0c57.svg" alt=""
                                     style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 0px;">
@@ -84,13 +84,14 @@
                     </div>
                     <span>
                         <input class="pointer" id="YouTube-video-id" type="text" value="Qt0-9mO-ZXY" size="12"
-                            pattern="[_\-0-9A-Za-z]{11}" onchange="youTubePlayerChangeVideoId();">
+                            pattern="[_\-0-9A-Za-z]{11}" onchange="youTubePlayerChangeVideoId();"
+                            style="display: none;">
                     </span>
                     <div style="width: 12px; height: 12px;"></div>
                     <div id="stations-selector">
                         <div id="stations-button" class="pointer"
                             style="display: flex; align-items: center; flex-wrap: nowrap;">
-                            <span>
+                            <span id="name-song">
                                 Space Lofi Hip Hop Radio 24/7 🚀 Chill Lofi Beats To Study, Lofi Sleep Music 🚀 No
                                 Copyright Lofi
                             </span>
@@ -108,17 +109,22 @@
                         <label for="YouTube-player-volume"></label>
                     </div>
                     <span class="nowrap">
-                        <button
-                            onclick="document.getElementById('YouTube-video-id').value='yG0oBPtyNb0'; youTubePlayerChangeVideoId();">1</button>
-                        <button
-                            onclick="document.getElementById('YouTube-video-id').value='F2Ug3VkFuDw'; youTubePlayerChangeVideoId();"
-                            title="Peter Popoff pris la main dans le sac par James Randi">2</button>
-                        <button
-                            onclick="document.getElementById('YouTube-video-id').value='fjpg04Tj0ec'; youTubePlayerChangeVideoId();"
-                            title="The Steven Seagal Show #002">3</button>
-                        <button
-                            onclick="document.getElementById('YouTube-video-id').value='LHdsMXEwLNE'; youTubePlayerChangeVideoId();"
-                            title="The Man from Earth (Richard Schenkman)">4</button>
+                        <button id="btn-1"
+                            onclick="document.getElementById('YouTube-video-id').value='5qap5aO4i9A'; youTubePlayerChangeVideoId();">
+                            1
+                        </button>
+                        <button id="btn-2"
+                            onclick="document.getElementById('YouTube-video-id').value='50VNCymT-Cs'; youTubePlayerChangeVideoId();">
+                            2
+                        </button>
+                        <button id="btn-3"
+                            onclick="document.getElementById('YouTube-video-id').value='50VNCymT-Cs'; youTubePlayerChangeVideoId();">
+                            3
+                        </button>
+                        <button id="btn-4"
+                            onclick="document.getElementById('YouTube-video-id').value='50VNCymT-Cs'; youTubePlayerChangeVideoId();">
+                            4
+                        </button>
                     </span>
                 </div>
             </div>
@@ -126,6 +132,7 @@
     </div>
 
     <script src="assets/js/app.js"></script>
+    <script src="./assets/js/btn.js"></script>
 </body>
 
 </html>

@@ -1,15 +1,37 @@
-let youTubePlayer;
+/**
+ * JavaScript code for the "YouTube API example"
+ * http://www.opimedia.be/DS/webdev/YouTube/
+ *
+ * (c) Olivier Pirson --- 2016 January, 26
+ */
+
+/**
+ * YT.Player initialized by onYouTubeIframeAPIReady().
+ */
+var youTubePlayer;
 
 
+
+/**
+ * Function called by https://www.youtube.com/iframe_api
+ * when it is loaded.
+ *
+ * Initialized YouTube iframe with the value of #YouTube-video-id as videoId
+ * and the value of #YouTube-player-volume as volume.
+ *
+ * Adapted from:
+ * https://developers.google.com/youtube/iframe_api_reference
+ * https://developers.google.com/youtube/player_parameters?playerVersion=HTML5
+ */
 function onYouTubeIframeAPIReady() {
     'use strict';
 
-    let inputVideoId = document.getElementById('YouTube-video-id');
-    let videoId = inputVideoId.value;
-    let suggestedQuality = 'tiny';
-    let height = 300;
-    let width = 400;
-    let youTubePlayerVolumeItemId = 'YouTube-player-volume';
+    var inputVideoId = document.getElementById('YouTube-video-id');
+    var videoId = inputVideoId.value;
+    var suggestedQuality = 'tiny';
+    var height = 300;
+    var width = 400;
+    var youTubePlayerVolumeItemId = 'YouTube-player-volume';
 
 
     function onError(event) {
@@ -18,7 +40,7 @@ function onYouTubeIframeAPIReady() {
 
 
     function onReady(event) {
-        let player = event.target;
+        var player = event.target;
 
         player.loadVideoById({
             suggestedQuality: suggestedQuality,
@@ -30,8 +52,8 @@ function onYouTubeIframeAPIReady() {
 
 
     function onStateChange(event) {
-        let volume = Math.round(event.target.getVolume());
-        let volumeItem = document.getElementById(youTubePlayerVolumeItemId);
+        var volume = Math.round(event.target.getVolume());
+        var volumeItem = document.getElementById(youTubePlayerVolumeItemId);
 
         if (volumeItem && (Math.round(volumeItem.value) != volume)) {
             volumeItem.value = volume;
@@ -44,7 +66,7 @@ function onYouTubeIframeAPIReady() {
             videoId: videoId,
             height: height,
             width: width,
-            playerlets: {
+            playerVars: {
                 'autohide': 0,
                 'cc_load_policy': 0,
                 'controls': 2,
@@ -88,8 +110,8 @@ function youTubePlayerActive() {
 function youTubePlayerChangeVideoId() {
     'use strict';
 
-    let inputVideoId = document.getElementById('YouTube-video-id');
-    let videoId = inputVideoId.value;
+    var inputVideoId = document.getElementById('YouTube-video-id');
+    var videoId = inputVideoId.value;
 
     youTubePlayer.cueVideoById({
         suggestedQuality: 'tiny',
@@ -156,22 +178,22 @@ function youTubePlayerDisplayInfos() {
         ++this.nbCalls;
     }
 
-    let indicatorDisplay = '<span id="indicator-display" title="timing of informations refreshing">' + ['|', '/', String.fromCharCode(8212), '\\'][this.nbCalls] + '</span>';
+    var indicatorDisplay = '<span id="indicator-display" title="timing of informations refreshing">' + ['|', '/', String.fromCharCode(8212), '\\'][this.nbCalls] + '</span>';
 
     if (youTubePlayerActive()) {
-        let state = youTubePlayer.getPlayerState();
+        var state = youTubePlayer.getPlayerState();
 
-        let current = youTubePlayer.getCurrentTime();
-        let duration = youTubePlayer.getDuration();
-        let currentPercent = (current && duration
+        var current = youTubePlayer.getCurrentTime();
+        var duration = youTubePlayer.getDuration();
+        var currentPercent = (current && duration
             ? current * 100 / duration
             : 0);
 
-        let fraction = (youTubePlayer.hasOwnProperty('getVideoLoadedFraction')
+        var fraction = (youTubePlayer.hasOwnProperty('getVideoLoadedFraction')
             ? youTubePlayer.getVideoLoadedFraction()
             : 0);
 
-        let url = youTubePlayer.getVideoUrl();
+        var url = youTubePlayer.getVideoUrl();
 
         if (!current) {
             current = 0;
@@ -180,7 +202,7 @@ function youTubePlayerDisplayInfos() {
             duration = 0;
         }
 
-        let volume = youTubePlayer.getVolume();
+        var volume = youTubePlayer.getVolume();
 
         if (!youTubePlayer.personalPlayer.currentTimeSliding) {
             document.getElementById('YouTube-player-progress').value = currentPercent;
@@ -232,7 +254,6 @@ function youTubePlayerPlay() {
     }
 }
 
-
 /**
  * Return the state decription corresponding of the state value.
  * If this value is incorrect, then return unknow.
@@ -248,7 +269,7 @@ function youTubePlayerPlay() {
 function youTubePlayerStateValueToDescription(state, unknow) {
     'use strict';
 
-    let STATES = {
+    var STATES = {
         '-1': 'unstarted',   // YT.PlayerState.
         '0': 'ended',        // YT.PlayerState.ENDED
         '1': 'playing',      // YT.PlayerState.PLAYING
@@ -299,11 +320,11 @@ function youTubePlayerVolumeChange(volume) {
 
     function init() {
         // Load YouTube library
-        let tag = document.createElement('script');
+        var tag = document.createElement('script');
 
         tag.src = 'https://www.youtube.com/iframe_api';
 
-        let first_script_tag = document.getElementsByTagName('script')[0];
+        var first_script_tag = document.getElementsByTagName('script')[0];
 
         first_script_tag.parentNode.insertBefore(tag, first_script_tag);
 
@@ -319,3 +340,4 @@ function youTubePlayerVolumeChange(volume) {
         window.attachEvent('onload', init);
     }
 }());
+
