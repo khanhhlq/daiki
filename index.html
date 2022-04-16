@@ -19,7 +19,7 @@
     <div id="root">
         <div class="fullscreen">
             <div id="container" class="">
-                <div id="YouTube-player" class="pointer" style="z-index: 999; display: none;"></div>
+                <div id="YouTube-player" class="pointer" style="z-index: 999; display: none"></div>
                 <img id="background" src="https://dc85enhu9zukf.cloudfront.net/gifs/lkceXNDw4Agryfrwz8.gif" alt=""
                     style="position: absolute; width: 100vw; height: 100vh; top: 0px; left: 0px; object-fit: cover; z-index: 0;">
                 <img src="https://dc85enhu9zukf.cloudfront.net/gifs/static3.gif" alt="preload"
@@ -38,11 +38,12 @@
                     </div>
                     <div class="vertical">
                         <div id="horizontal">
-                            <button type="button" class="hide-small-screen" title="Fullscreen"
+                            <!-- <button id="fullScreen" onclick="openFullscreen()" type="button" class="hide-small-screen"
+                                title="Fullscreen"
                                 style="display: flex; align-items: center; margin-right: 14px; line-height: 0;">
                                 <img class="shadow" src="assets/media/svg/fullscreen-enter.47fab6db.svg" alt=""
                                     style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 0px;">
-                            </button>
+                            </button> -->
                             <button type="button" title="Pomodoro Timer"
                                 style="display: flex; align-items: center; margin-right: 14px; line-height: 0;">
                                 <img class="shadow" src="assets/media/svg/timer.1427f4b2.svg" alt=""
@@ -84,7 +85,7 @@
                     </div>
                     <span>
                         <input class="pointer" id="YouTube-video-id" type="text" value="Qt0-9mO-ZXY" size="12"
-                            pattern="[_\-0-9A-Za-z]{11}" onchange=";" style="display: none;">
+                            pattern="[_\-0-9A-Za-z]{11}" onchange="youTubePlayerChangeVideoId();" style="display: none">
                     </span>
                     <div style="width: 12px; height: 12px;"></div>
                     <div id="stations-selector">
@@ -108,7 +109,7 @@
                         <label for="YouTube-player-volume"></label>
                     </div>
                     <span class="nowrap">
-                        <button id="btn-1" onclick="document.getElementById('YouTube-video-id').value = idVideo.song1;">
+                        <button id="btn-1">
                             1
                         </button>
                         <button id="btn-2" onclick="document.getElementById('YouTube-video-id').value = idVideo.song2;">
@@ -128,7 +129,7 @@
 
     <script src="assets/js/app.js"></script>
     <script src="assets/js/btn.js"></script>
-    <script src="assets/data/idVideo.js"></script>
+    <script src="assets/js/fullScreen.js"></script>
 </body>
 
 </html>
