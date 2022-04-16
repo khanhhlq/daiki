@@ -5,4 +5,5 @@ let idVideo = {
     song4: 'kgx4WGK0oNU'
 }
 
+export default idVideo;
 

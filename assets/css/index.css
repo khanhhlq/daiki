@@ -162,6 +162,10 @@ select {
   text-align: left;
 }
 
+.active{
+  background-color: red;
+}
+
 input {
   appearance: none;
   -webkit-appearance: none;
