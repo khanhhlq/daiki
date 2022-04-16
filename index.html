@@ -84,14 +84,13 @@
                     </div>
                     <span>
                         <input class="pointer" id="YouTube-video-id" type="text" value="Qt0-9mO-ZXY" size="12"
-                            pattern="[_\-0-9A-Za-z]{11}" onchange="youTubePlayerChangeVideoId();"
-                            style="display: none;">
+                            pattern="[_\-0-9A-Za-z]{11}" onchange=";" style="display: none;">
                     </span>
                     <div style="width: 12px; height: 12px;"></div>
                     <div id="stations-selector">
                         <div id="stations-button" class="pointer"
                             style="display: flex; align-items: center; flex-wrap: nowrap;">
-                            <span id="name-song">
+                            <span id="name-song" style="font-size: 18px; text-transform: none;">
                                 Space Lofi Hip Hop Radio 24/7 🚀 Chill Lofi Beats To Study, Lofi Sleep Music 🚀 No
                                 Copyright Lofi
                             </span>
@@ -109,20 +108,16 @@
                         <label for="YouTube-player-volume"></label>
                     </div>
                     <span class="nowrap">
-                        <button id="btn-1"
-                            onclick="document.getElementById('YouTube-video-id').value = idVideo.song1; youTubePlayerChangeVideoId();">
+                        <button id="btn-1" onclick="document.getElementById('YouTube-video-id').value = idVideo.song1;">
                             1
                         </button>
-                        <button id="btn-2"
-                            onclick="document.getElementById('YouTube-video-id').value = idVideo.song2; youTubePlayerChangeVideoId();">
+                        <button id="btn-2" onclick="document.getElementById('YouTube-video-id').value = idVideo.song2;">
                             2
                         </button>
-                        <button id="btn-3"
-                            onclick="document.getElementById('YouTube-video-id').value = idVideo.song3; youTubePlayerChangeVideoId();">
+                        <button id="btn-3" onclick="document.getElementById('YouTube-video-id').value = idVideo.song3;">
                             3
                         </button>
-                        <button id="btn-4"
-                            onclick="document.getElementById('YouTube-video-id').value = idVideo.song4; youTubePlayerChangeVideoId();">
+                        <button id="btn-4" onclick="document.getElementById('YouTube-video-id').value = idVideo.song4;">
                             4
                         </button>
                     </span>
