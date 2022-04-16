@@ -84,8 +84,7 @@
                     </div>
                     <span>
                         <input class="pointer" id="YouTube-video-id" type="text" value="Qt0-9mO-ZXY" size="12"
-                            pattern="[_\-0-9A-Za-z]{11}" onchange="youTubePlayerChangeVideoId();"
-                            style="display: none;">
+                            pattern="[_\-0-9A-Za-z]{11}" onchange="youTubePlayerChangeVideoId();">
                     </span>
                     <div style="width: 12px; height: 12px;"></div>
                     <div id="stations-selector">
@@ -108,6 +107,19 @@
                             style="margin: 15px 0px 0px 0px;" onchange="youTubePlayerVolumeChange(this.value);">
                         <label for="YouTube-player-volume"></label>
                     </div>
+                    <span class="nowrap">
+                        <button
+                            onclick="document.getElementById('YouTube-video-id').value='yG0oBPtyNb0'; youTubePlayerChangeVideoId();">1</button>
+                        <button
+                            onclick="document.getElementById('YouTube-video-id').value='F2Ug3VkFuDw'; youTubePlayerChangeVideoId();"
+                            title="Peter Popoff pris la main dans le sac par James Randi">2</button>
+                        <button
+                            onclick="document.getElementById('YouTube-video-id').value='fjpg04Tj0ec'; youTubePlayerChangeVideoId();"
+                            title="The Steven Seagal Show #002">3</button>
+                        <button
+                            onclick="document.getElementById('YouTube-video-id').value='LHdsMXEwLNE'; youTubePlayerChangeVideoId();"
+                            title="The Man from Earth (Richard Schenkman)">4</button>
+                    </span>
                 </div>
             </div>
         </div>

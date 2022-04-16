@@ -13,3 +13,5 @@ let backGround = {
 
 let image = document.getElementById("background")
 
+
+
