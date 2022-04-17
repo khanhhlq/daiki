@@ -8,28 +8,24 @@ let textData = [
 
 let radio = document.getElementById("radio-text")
 
-let i = -5
+setInterval(() => {
+    setTimeout(() => {
+        radio.innerHTML = textData[0]
+    }, 7000)
 
-setTimeout(() => {
-    radio.innerHTML = textData[0]
-}, 7000)
+    setTimeout(() => {
+        radio.innerHTML = textData[1]
+    }, 20000)
 
-setTimeout(() => {
-    radio.innerHTML = textData[1]
-}, 20000)
+    setTimeout(() => {
+        radio.innerHTML = textData[2]
+    }, 30000)
 
-setTimeout(() => {
-    radio.innerHTML = textData[2]
-}, 30000)
+    setTimeout(() => {
+        radio.innerHTML = textData[3]
+    }, 40000)
 
-setTimeout(() => {
-    radio.innerHTML = textData[3]
-}, 40000)
-
-setTimeout(() => {
-    radio.innerHTML = textData[4]
-}, 100000)
-
-
-
-
+    setTimeout(() => {
+        radio.innerHTML = textData[4]
+    }, 100000)
+}, 5000)
