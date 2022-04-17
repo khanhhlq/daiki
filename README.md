@@ -1,4 +1,4 @@
-## PREVIEW
+## 🧊 PREVIEW - SO COOL
 
 <img src="./bin/cover/cover1.png">
 <img src="./bin/cover/cover2.png">
