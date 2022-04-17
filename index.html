@@ -8,6 +8,7 @@
     <meta name="description" content="Lofi music streams for studying, working, and relaxing.">
     <meta property="og:title" content="i love my cafe - lofi music 🎧">
     <title>Daiki - Lofi Music 🎧</title>
+    <link rel="stylesheet" href="assets/css/widgetbot.css">
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/pomodoro.css">
     <link rel="shortcut icon" href="assets/media/icon/favicon.png" type="image/x-icon">
@@ -67,7 +68,11 @@
                         </div>
                     </div>
                 </div>
-                <div style="width: 100%; z-index: 6; display: block;">
+                <div style="width: 100%; z-index: 999; display: block;">
+                    <div id="widget" class="displayNone">
+                        <widgetbot server="965114792614441000" channel="965114793067434026" width="300" height="400">
+                        </widgetbot>
+                    </div>
                     <div style="width: 14px; height: 14px;"></div>
                     <!-- Pomodoro Container -->
                     <div id="pomo" class="displayNone">
@@ -189,12 +194,17 @@
                         <button id="btn-4" onclick="document.getElementById('YouTube-video-id').value = idVideo.song4;">
                             4
                         </button>
-                        <button id="btn-5" onclick="document.getElementById('YouTube-video-id').value = idVideo.song4;">
+                        <button id="btn-5">
                             🎧
                         </button>
-                        <button id="btn-6" class="displayNone" onclick="
-                            document.getElementById('YouTube-video-id').value=idVideo.song4;">
+                        <button id="btn-6" class="displayNone">
                             🧊
+                        </button>
+                        <button id="btn-7">
+                            💬
+                        </button>
+                        <button id="btn-8" class="displayNone">
+                            ❌
                         </button>
                     </span>
                 </div>
@@ -208,6 +218,8 @@
     <script src="assets/js/textRadio.js"></script>
     <script src="assets/js/spotify.js"></script>
     <script src="assets/js/pomodoro.js"></script>
+    <script src="assets/js/widgetbot.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
 </body>
 
 </html>

@@ -83,7 +83,9 @@ let previous = document.getElementById("previous")
 let forward = document.getElementById("forward")
 
 previous.addEventListener("click", () => {
-    idVideo--
+    let i = 0
+    i++;
+    
 })
 // forward.addEventListener("click", forSong)
 
