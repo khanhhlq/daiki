@@ -1,16 +1,26 @@
 let spotify = document.getElementById("spotify")
 let btnSpotify = document.getElementById("btn-5")
 let btnSpotify2 = document.getElementById("btn-6")
-let nowrap = document.getElementById("nowrap")
+let stations = document.getElementById("stations-selector")
+let ytbvolume = document.getElementById("YouTube-player-volume")
+let btnUi = document.querySelector(".btncon")
 
 btnSpotify.addEventListener("click", () => {
-    spotify.classList.remove("displayNone");
-    btnSpotify.classList.add("displayNone");
-    btnSpotify2.classList.remove("displayNone");
+    spotify.classList.remove("displayNone")
+    btnSpotify.classList.add("displayNone")
+    btnSpotify2.classList.remove("displayNone")
+    ytbvolume.classList.add("displayNone")
+    stations.classList.add("displayNone")
+    btnUi.classList.add("displayNone")
+    youTubePlayerChangeVideoId()
 })
 
 btnSpotify2.addEventListener("click", () => {
-    spotify.classList.add("displayNone");
-    btnSpotify.classList.remove("displayNone");
-    btnSpotify2.classList.add("displayNone");
+    spotify.classList.add("displayNone")
+    btnSpotify.classList.remove("displayNone")
+    btnSpotify2.classList.add("displayNone")
+    ytbvolume.classList.remove("displayNone")
+    stations.classList.remove("displayNone")
+    btnUi.classList.remove("displayNone")
+    youTubePlayerChangeVideoId()
 })
