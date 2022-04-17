@@ -5,10 +5,9 @@ let textData = [
     "🌊 Fighting",
 ]
 
-
 let radio = document.getElementById("radio-text")
 
 
-for (let i = )
+
 
 
