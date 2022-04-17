@@ -46,10 +46,10 @@ btn1.addEventListener("click", () => {
 btn2.addEventListener("click", () => {
     bg.src = document.getElementById("preload2").src
     setTimeout(() => {
-        bg.src = data[0].bg2
+        bg.src = data[1].bg2
     }, 500)
-    ytb.value = data[0].song2
-    nameSong.innerHTML = data[0].name2
+    ytb.value = data[1].song2
+    nameSong.innerHTML = data[1].name2
     document.getElementById("pause").classList.add("displayNone")
     document.getElementById("play").classList.remove("displayNone")
     youTubePlayerChangeVideoId()
@@ -58,10 +58,10 @@ btn2.addEventListener("click", () => {
 btn3.addEventListener("click", () => {
     bg.src = document.getElementById("preload1").src
     setTimeout(() => {
-        bg.src = data[0].bg3
+        bg.src = data[2].bg3
     }, 500)
-    ytb.value = data[0].song3
-    nameSong.innerHTML = data[0].name3
+    ytb.value = data[2].song3
+    nameSong.innerHTML = data[2].name3
     document.getElementById("pause").classList.add("displayNone")
     document.getElementById("play").classList.remove("displayNone")
     youTubePlayerChangeVideoId()
@@ -70,10 +70,10 @@ btn3.addEventListener("click", () => {
 btn4.addEventListener("click", () => {
     bg.src = document.getElementById("preload2").src
     setTimeout(() => {
-        bg.src = data[0].bg4
+        bg.src = data[3].bg4
     }, 500)
-    ytb.value = data[0].song4
-    nameSong.innerHTML = data[0].name4
+    ytb.value = data[3].song4
+    nameSong.innerHTML = data[3].name4
     document.getElementById("pause").classList.add("displayNone")
     document.getElementById("play").classList.remove("displayNone")
     youTubePlayerChangeVideoId()
