@@ -9,6 +9,7 @@
     <meta property="og:title" content="i love my cafe - lofi music 🎧">
     <title>Daiki - Lofi Music 🎧</title>
     <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/pomodoro.css">
     <link rel="shortcut icon" href="assets/media/icon/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
@@ -44,11 +45,20 @@
                                 <img class="shadow" src="assets/media/svg/fullscreen-enter.47fab6db.svg" alt=""
                                     style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 0px;">
                             </button>
-                            <button type="button" title="Pomodoro Timer"
-                                style="display: flex; align-items: center; margin-right: 14px; line-height: 0;">
-                                <img class="shadow" src="assets/media/svg/timer.1427f4b2.svg" alt=""
-                                    style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 0px;">
-                            </button>
+                            <div id="pomo1">
+                                <button id="pomodoro" type="button" title="Pomodoro Timer"
+                                    style="display: flex; align-items: center; margin-right: 14px; line-height: 0;">
+                                    <img class="shadow" src="assets/media/svg/timer.1427f4b2.svg" alt=""
+                                        style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 0px;">
+                                </button>
+                            </div>
+                            <div id="pomodoro1" class="displayNone">
+                                <button type="button" title="Pomodoro Timer"
+                                    style="display: flex; align-items: center; margin-right: 14px; line-height: 0;">
+                                    <img class="shadow" src="assets/media/svg/checkmark.27630148.svg" alt=""
+                                        style="width: 20px; height: 20px; flex: 0 0 20px; margin-right: 0px;">
+                                </button>
+                            </div>
                             <button type="button" title="About"
                                 style="display: flex; align-items: center; line-height: 0;">
                                 <img class="shadow" src="assets/media/svg/heart.0513072e.svg" alt=""
@@ -59,6 +69,55 @@
                 </div>
                 <div style="width: 100%; z-index: 6; display: block;">
                     <div style="width: 14px; height: 14px;"></div>
+                    <!-- Pomodoro Container -->
+                    <div id="pomo" class="displayNone">
+                        <div class="pomodoro-container">
+
+                            <!-- Session -->
+                            <div class=" pomodoro-item">
+                                <div id="labelSessionBreak" class="label">Session</div>
+                                <div class="row-pomodoro">
+                                    <div id="timeLeft">25:00</div>
+                                </div>
+                            </div>
+
+                            <!-- Session Length -->
+                            <div class="pomodoro-item">
+                                <div class="label">Session Length</div>
+                                <div class="row-pomodoro">
+                                    <button id="sessionDecrement" class="btn-updown">-</button>
+                                    <div id="sessionLength" class="row-pomodoro lengthTime">25</div>
+                                    <button id="sessionIncrement" class="btn-updown">+</button>
+                                </div>
+                            </div>
+
+                            <!-- Break Length -->
+                            <div class="pomodoro-item">
+                                <div class="label">Break Length</div>
+                                <div class="row-pomodoro">
+                                    <button id="breakDecrement" class="btn-updown">-</button>
+                                    <div id="breakLength" class="row-pomodoro lengthTime">5</div>
+                                    <button id="breakIncrement" class="btn-updown">+</button>
+                                </div>
+                            </div>
+
+                            <!-- Play/Pause/Reset -->
+                            <div class="pomodoro-item playerButton">
+                                <div class="row-pomodoro buttonRow">
+                                    <button id="buttonPlay" class="btn-controller">
+                                        <i id="playIcon" class="fa fa-play" aria-hidden="true"></i>
+                                    </button>
+                                    <button id="buttonReset" class="btn-controller">
+                                        <i class="fas fa-sync" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Sound -->
+                    <audio id="beep" src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3"></audio>
                     <div class="btncon">
                         <div id="buttons-ui">
                             <div style="display: flex; justify-content: flex-start; align-items: center;">
@@ -148,6 +207,7 @@
     <script src="assets/js/fullScreen.js"></script>
     <script src="assets/js/textRadio.js"></script>
     <script src="assets/js/spotify.js"></script>
+    <script src="assets/js/pomodoro.js"></script>
 </body>
 
 </html>
