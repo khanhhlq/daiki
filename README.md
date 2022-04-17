@@ -1,5 +1,5 @@
 ## 🧊 PREVIEW - SO COOL
-# Author: Akira and Khai Dang 🛹
+### Author: Akira and Khai Dang 🛹
 
 <img src="./bin/cover/cover1.png">
 <img src="./bin/cover/cover2.png">
