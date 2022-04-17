@@ -40,6 +40,7 @@ buttonPlay.addEventListener('click', () => {
         interval = setInterval(handleTime, 1000);
 
         // Affichage icône pause
+        playIcon.innerHTML = "pause"
         playIcon.classList.remove('fa-play');
         playIcon.classList.add('fa-pause');
 
@@ -80,6 +81,7 @@ buttonPlay.addEventListener('click', () => {
     // Chrono mis en pause
     else {
         // Affichage icône play
+        playIcon.innerHTML = "start"
         playIcon.classList.add('fa-play');
         playIcon.classList.remove('fa-pause');
     }
