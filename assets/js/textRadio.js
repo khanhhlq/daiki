@@ -7,6 +7,11 @@ let textData = [
 
 let radio = document.getElementById("radio-text")
 
+let i = -5
+
+
+
+
 
 
 
