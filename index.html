@@ -105,6 +105,11 @@
                             oninput="youTubePlayerCurrentTimeSlide();">
                         <label for="YouTube-player-progress"></label>
                     </div> -->
+                    <iframe id="spotify" class="displayNone style=" border-radius:12px"
+                        src="https://open.spotify.com/embed/show/5tn7K3jfCrKro2LsOuhCf6?utm_source=generator&theme=0&t=0"
+                        width="40%" height="232" frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+                    </iframe>
                     <div>
                         <input class="pointer" id="YouTube-player-volume" type="range" value="50" min="0" max="100"
                             style="margin: 15px 0px 0px 0px;" onchange="youTubePlayerVolumeChange(this.value);">
@@ -123,6 +128,13 @@
                         <button id="btn-4" onclick="document.getElementById('YouTube-video-id').value = idVideo.song4;">
                             4
                         </button>
+                        <button id="btn-5" onclick="document.getElementById('YouTube-video-id').value = idVideo.song4;">
+                            🎧
+                        </button>
+                        <button id="btn-6" class="displayNone" onclick="
+                            document.getElementById('YouTube-video-id').value=idVideo.song4;">
+                            🧊
+                        </button>
                     </span>
                 </div>
             </div>
@@ -133,6 +145,7 @@
     <script src="assets/js/data.js"></script>
     <script src="assets/js/fullScreen.js"></script>
     <script src="assets/js/textRadio.js"></script>
+    <script src="assets/js/spotify.js"></script>
 </body>
 
 </html>

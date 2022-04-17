@@ -267,6 +267,10 @@ input::placeholder {
   }
 }
 
+#spotify{
+ margin: 16px 0px 0px 0px;
+}
+
 #top-ui {
   z-index: 5;
   display: flex;
