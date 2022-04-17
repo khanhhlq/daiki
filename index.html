@@ -12,7 +12,10 @@
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/pomodoro.css">
     <link rel="shortcut icon" href="assets/media/icon/favicon.png" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/322b7305b3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/brands.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/solid.css">
 </head>
 
 <body>
@@ -108,8 +111,7 @@
                             <div class="pomodoro-item playerButton">
                                 <div class="row-pomodoro buttonRow">
                                     <button id="buttonPlay" class="btn-controller">
-                                        <i id="playIcon" class="fa fa-play" aria-hidden="true"></i>
-                                        <i class="fa-solid fa-play"></i>
+                                        <i id="playIcon" class="fa fa-play" aria-hidden="true">🟢</i>
                                     </button>
                                     <button id="buttonReset" class="btn-controller">
                                         <i class="fas fa-sync" aria-hidden="true"></i>
@@ -152,7 +154,8 @@
                     </div>
                     <span>
                         <input class="pointer" id="YouTube-video-id" type="text" value="Qt0-9mO-ZXY" size="12"
-                            pattern="[_\-0-9A-Za-z]{11}" onchange="youTubePlayerChangeVideoId();">
+                            pattern="[_\-0-9A-Za-z]{11}" onchange="youTubePlayerChangeVideoId();"
+                            style="display: none;">
                     </span>
                     <div style="width: 12px; height: 12px;"></div>
                     <div id="stations-selector">
