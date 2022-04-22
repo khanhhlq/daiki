@@ -25,6 +25,10 @@
 - Trò chuyện trực tiếp qua ứng dựng Discord 💬
 - Cùng học theo phương pháp Pomodoro ⏰
 
+### 🍵 Lợi ích mà sản phẩm đem lại
+
+<img src="./bin/cover/benefit.png" width="65px">
+
 ### 📷 Một số hình ảnh xem trước về dự án
 
 <img src="./bin/cover/cover1.png">
