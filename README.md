@@ -17,7 +17,7 @@
   - Embed Spotify 🔮
   - Embed Discord 🌐
 
-### 🍄 Những tính năng chính
+### 🔨 Những tính năng chính
 
 - Phát/Tạm dừng/Chuyển bài nhạc trực tiếp 🔴
 - Chỉnh âm lượng 🔊
