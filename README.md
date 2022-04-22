@@ -2,6 +2,8 @@
 
 <p align='center'>🦚 Dự án tốt nghiệp khoá Web Advanced tại MindX - Cuộc thi chung kết X-Talent Tháng 4 - Save The Earth🤙</p>
 
+<img src="./bin/cover/savetheearth.png" align='center' width="650px">
+
 ### 🍄 Ngôn ngữ lập trình và công nghệ
 
 - Dự án được phát khai và xây dựng trên 3 ngôn ngữ lập trình:
