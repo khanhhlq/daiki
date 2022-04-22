@@ -27,7 +27,7 @@
 
 ### 🍵 Lợi ích mà sản phẩm đem lại
 
-<img src="./bin/cover/benefit.png" width="550px">
+<img src="./bin/cover/benefit.png" width="650px">
 
 ### 📷 Một số hình ảnh xem trước về dự án
 
