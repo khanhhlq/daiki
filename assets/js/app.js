@@ -1,28 +1,5 @@
-/**
- * JavaScript code for the "YouTube API example"
- * http://www.opimedia.be/DS/webdev/YouTube/
- *
- * (c) Olivier Pirson --- 2016 January, 26
- */
-
-/**
- * YT.Player initialized by onYouTubeIframeAPIReady().
- */
 var youTubePlayer;
 
-
-
-/**
- * Function called by https://www.youtube.com/iframe_api
- * when it is loaded.
- *
- * Initialized YouTube iframe with the value of #YouTube-video-id as videoId
- * and the value of #YouTube-player-volume as volume.
- *
- * Adapted from:
- * https://developers.google.com/youtube/iframe_api_reference
- * https://developers.google.com/youtube/player_parameters?playerVersion=HTML5
- */
 function onYouTubeIframeAPIReady() {
     'use strict';
 
