@@ -12,6 +12,8 @@ btnSpotify.addEventListener("click", () => {
     ytbvolume.classList.add("displayNone")
     stations.classList.add("displayNone")
     btnUi.classList.add("displayNone")
+    document.getElementById("pause").classList.add("displayNone")
+    document.getElementById("play").classList.remove("displayNone")
     youTubePlayerChangeVideoId()
 })
 
@@ -22,5 +24,7 @@ btnSpotify2.addEventListener("click", () => {
     ytbvolume.classList.remove("displayNone")
     stations.classList.remove("displayNone")
     btnUi.classList.remove("displayNone")
+    document.getElementById("pause").classList.add("displayNone")
+    document.getElementById("play").classList.remove("displayNone")
     youTubePlayerChangeVideoId()
 })
