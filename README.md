@@ -2,7 +2,7 @@
 
 <p align='center'>🦚 Dự án tốt nghiệp khoá Web Advanced tại MindX - Cuộc thi chung kết X-Talent Tháng 4 - Save The Earth🤙</p>
 
-<img src="./bin/cover/savetheearth.png" align='center' width="650px">
+<img src="./bin/cover/savetheearth.png">
 
 ### 🍄 Ngôn ngữ lập trình và công nghệ
 
