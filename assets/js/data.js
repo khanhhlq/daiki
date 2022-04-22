@@ -1,22 +1,22 @@
 let data = [
     {
         song: '5qap5aO4i9A',
-        name: 'lofi hip hop radio - beats to relax/study to',
+        name: '🌏 lofi hip hop radio - beats to relax/study to',
         bg: 'https://thumbs.gfycat.com/AcceptableGreedyDutchsmoushond-size_restricted.gif',
     },
     {
         song: '-5KAN9_CzSA',
-        name: 'coffee shop radio // 24/7 lofi hip-hop beats',
+        name: '🌍 coffee shop radio // 24/7 lofi hip-hop beats 💌',
         bg: 'https://i.gifer.com/2swA.gif'
     },
     {
         song: 'DrmcAh2FRHQ',
-        name: 'Jazz Piano Music - Relaxing Slow Jazz 24/7 for Work, Sleep, Study and Relax',
+        name: '🌎 Jazz Piano Music - Relaxing Slow Jazz 24/7 for Work, Sleep, Study and Relax 💦',
         bg: 'https://thumbs.gfycat.com/AcceptableGreedyDutchsmoushond-size_restricted.gif'
     },
     {
         song: 'kgx4WGK0oNU',
-        name: 'jazz/lofi hip hop radio🌱chill beats to relax/study to [LIVE 24/7]',
+        name: '🌍 jazz/lofi hip hop radio🌱chill beats to relax/study to [LIVE 24/7]',
         bg: 'https://c.tenor.com/wch_imF_RLUAAAAC/lofi.gif'
     }
 ]
