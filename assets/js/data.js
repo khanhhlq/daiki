@@ -12,7 +12,7 @@ let data = [
     {
         song: 'DrmcAh2FRHQ',
         name: '🌎 Jazz Piano Music - Relaxing Slow Jazz 24/7 for Work, Sleep, Study and Relax 💦',
-        bg: 'https://thumbs.gfycat.com/AcceptableGreedyDutchsmoushond-size_restricted.gif'
+        bg: 'https://i.pinimg.com/originals/34/16/fc/3416fc4113b69a0bf1cc75a772c4b5c4.gif'
     },
     {
         song: 'kgx4WGK0oNU',
